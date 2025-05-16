@@ -15,10 +15,12 @@
             flex-direction: column;
             min-height: 100vh;
             background-image: url('back.jpg');
+            background-size: cover;
+            background-position: center center;
         }
 
         nav {
-            background: #111;
+            background: linear-gradient(to bottom, black, transparent);
             padding: 1rem 2rem;
             display: flex;
             justify-content: flex-start;
@@ -63,9 +65,9 @@
 
         .neon-circle h1 {
             margin: 0;
-            font-size: 1.5rem;
-            color: #0ff;
-            text-shadow: 0 0 10px #0ff;
+            font-size: 2rem;
+            padding: 0 0.5rem;
+            color: white;
         }
 
         @keyframes pulse {
@@ -99,7 +101,8 @@
 
     <div class="main">
         <div class="neon-circle">
-            <h1>Cardinal Troy Labs</h1>
+            <h1>C A R D I N A L<br><span style="font-size: 50%;">Game Developing</span></h1>
+
         </div>
     </div>
 
