@@ -52,6 +52,7 @@
         }
 
         .neon-circle {
+            overflow: hidden;
             width: 300px;
             height: 300px;
             border-radius: 50%;
@@ -65,16 +66,34 @@
             flex-wrap: wrap;
             text-wrap: nowrap;
             animation: pulse 2s infinite ease-in-out;
-
+            background-image: url('mount.png');
+            background-repeat: no-repeat;
+            background-position: bottom;
 
         }
-
+        .desc{
+            margin-top: 20px;
+        }
         .label {
             margin: 0;
             font-size: 2.4rem;
             padding: 0 0.5rem;
             color: red;
             text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .span{
+            width:260px;
+            display: flex;
+            justify-content: right;
+            .box{
+                background-color: #FF7F0A;
+                width:fit-content;
+                padding: 3px 7px 5px 7px;
+                border-radius: 10px;
+                color: white;
+                box-shadow: 0 0 10px 2px #FF7F0A;
+            }
         }
 
 
@@ -105,18 +124,19 @@
 <body>
     <nav>
         <a href="https://play.google.com/store/apps/developer?id=Cardinal_Troy">Projects</a>
+        <a href="https://github.com/cardinaltroy">Github</a>
     </nav>
 
     <div class="main">
         <div class="neon-circle">
-            <div class="span">Mobile App</div>
+            <div class="desc">Mobile App Dev</div>
             <div class="label">C A R D I N A L</div>
-            <div class="span">Developing</div>
+            <div class="span"><div class="box">TROY LABS</div></div>
         </div>
     </div>
 
     <footer>
-        &copy; 2025 Cardinal Troy Labs. All rights reserved.
+        &copy; 2022 - 2025 Cardinal Troy Labs. All rights reserved.
     </footer>
 </body>
 
