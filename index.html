@@ -52,7 +52,8 @@
         }
 
         .neon-circle {
-            overflow: hidden;
+            position: relative;
+            overflow: visible;
             width: 300px;
             height: 300px;
             border-radius: 50%;
@@ -65,15 +66,17 @@
             justify-content: center;
             flex-wrap: wrap;
             text-wrap: nowrap;
-            animation: pulse 2s infinite ease-in-out;
+            /*animation: pulse 2s infinite ease-in-out;*/
             background-image: url('mount.png');
             background-repeat: no-repeat;
             background-position: bottom;
 
         }
-        .desc{
+
+        .desc {
             margin-top: 20px;
         }
+
         .label {
             margin: 0;
             font-size: 2.4rem;
@@ -82,21 +85,49 @@
             text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
         }
 
-        .span{
-            width:260px;
+        .span {
+            width: 260px;
             display: flex;
             justify-content: right;
-            .box{
-                background-color: #FF7F0A;
-                width:fit-content;
-                padding: 3px 7px 5px 7px;
-                border-radius: 10px;
-                color: white;
-                box-shadow: 0 0 10px 2px #FF7F0A;
-            }
+
+
         }
 
+        .box {
+            background-color: #FF7F0A;
+            width: fit-content;
+            padding: 3px 7px 5px 7px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 0 10px 2px #FF7F0A;
+        }
 
+        .neon-circle::before,
+        .neon-circle::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border: 2px solid #FF7F0A;
+            border-radius: inherit;
+            animation: pulseOut 2s ease-out infinite;
+            opacity: 0;
+        }
+
+        .neon-circle::after {
+            animation-delay: 1s;
+        }
+
+        @keyframes pulseOut {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
 
         @keyframes pulse {
 
@@ -131,7 +162,9 @@
         <div class="neon-circle">
             <div class="desc">Mobile App Dev</div>
             <div class="label">C A R D I N A L</div>
-            <div class="span"><div class="box">TROY LABS</div></div>
+            <div class="span">
+                <div class="box">TROY LABS</div>
+            </div>
         </div>
     </div>
 
